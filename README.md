@@ -57,3 +57,23 @@ Go to your github page and select the branch you are working on. On the top righ
 Let's say the reviewer approved your request. Now you can commit it and merge with the main branch by clicking on "Merge pull request" on your github page. Then click "confirm merge".
 
 Now you should get the message **"pull request successfully merged and closed"**. Beside the message, it shows you now a button **"delete branch"**. As all the commits you did on that branch are already commited and merged with the **main** branch, it is safe to delete it. The commit history is now merged in the **main** branch and you will still have access to it there.
+
+Now the branch we don't need anymore is deleted on the remote github.
+
+- To delete the branch also on your local github repository:
+
+```
+~ git branch -d [branch name]
+```
+
+Now we still need to pull the commits that we merged remotely on the **main** branch into our local **main** branch. We switch back to **main** and enter **git pull** command.
+You should get a message like this:
+
+```
+Your branch is behind 'origin/main' by 3 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+```
+
+Enter the **git pull** request again, to pull the changes to your local repository.
+
+To check if your local repo is up to date with the remote repo, do a **git status** again.
